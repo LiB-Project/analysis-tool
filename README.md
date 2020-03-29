@@ -1,2 +1,8 @@
-# analysis-tool
-Ferramenta de análise e recomendação de documentos
+**Requisitos**
+- python3
+- pipenv
+
+**Execução**
+ ```shell script
+    sh run.sh
+  ``` 

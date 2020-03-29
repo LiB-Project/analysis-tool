@@ -1,0 +1,5 @@
+paths:
+  lda: "data/lda.model"
+  dictionary: "data/dictionary"
+  docs_processed: "data/docs_preprocessed"
+  docs_bow: "data/docs_bow"
