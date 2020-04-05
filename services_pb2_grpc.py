@@ -6,160 +6,244 @@ import message_types_pb2 as message__types__pb2
 
 
 class DocumentServiceStub(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def __init__(self, channel):
-    """Constructor.
+    def __init__(self, channel):
+        """Constructor.
 
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.findFrequencyDistribution = channel.unary_unary(
-        '/br.edu.ifpb.lib.DocumentService/findFrequencyDistribution',
-        request_serializer=message__types__pb2.FrequencyDistributionRequest.SerializeToString,
-        response_deserializer=message__types__pb2.FrequencyDistribution.FromString,
-        )
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.findFrequencyDistribution = channel.unary_unary(
+                '/br.edu.ifpb.lib.DocumentService/findFrequencyDistribution',
+                request_serializer=message__types__pb2.FrequencyDistributionRequest.SerializeToString,
+                response_deserializer=message__types__pb2.FrequencyDistribution.FromString,
+                )
 
 
 class DocumentServiceServicer(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def findFrequencyDistribution(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def findFrequencyDistribution(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
 
 def add_DocumentServiceServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'findFrequencyDistribution': grpc.unary_unary_rpc_method_handler(
-          servicer.findFrequencyDistribution,
-          request_deserializer=message__types__pb2.FrequencyDistributionRequest.FromString,
-          response_serializer=message__types__pb2.FrequencyDistribution.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'br.edu.ifpb.lib.DocumentService', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
+    rpc_method_handlers = {
+            'findFrequencyDistribution': grpc.unary_unary_rpc_method_handler(
+                    servicer.findFrequencyDistribution,
+                    request_deserializer=message__types__pb2.FrequencyDistributionRequest.FromString,
+                    response_serializer=message__types__pb2.FrequencyDistribution.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'br.edu.ifpb.lib.DocumentService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class DocumentService(object):
+    """Missing associated documentation comment in .proto file"""
+
+    @staticmethod
+    def findFrequencyDistribution(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/br.edu.ifpb.lib.DocumentService/findFrequencyDistribution',
+            message__types__pb2.FrequencyDistributionRequest.SerializeToString,
+            message__types__pb2.FrequencyDistribution.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
 
 
 class LdaStub(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def __init__(self, channel):
-    """Constructor.
+    def __init__(self, channel):
+        """Constructor.
 
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.treinarModeloLDAComDocumentos = channel.stream_unary(
-        '/br.edu.ifpb.lib.Lda/treinarModeloLDAComDocumentos',
-        request_serializer=message__types__pb2.DocumentoConteudo.SerializeToString,
-        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-        )
-    self.treinarModeloLDA = channel.unary_unary(
-        '/br.edu.ifpb.lib.Lda/treinarModeloLDA',
-        request_serializer=message__types__pb2.DocumentoConteudo.SerializeToString,
-        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-        )
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.treinarModeloLDAComDocumentos = channel.stream_unary(
+                '/br.edu.ifpb.lib.Lda/treinarModeloLDAComDocumentos',
+                request_serializer=message__types__pb2.DocumentoConteudo.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
+        self.treinarModeloLDA = channel.unary_unary(
+                '/br.edu.ifpb.lib.Lda/treinarModeloLDA',
+                request_serializer=message__types__pb2.DocumentoConteudo.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
 
 
 class LdaServicer(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def treinarModeloLDAComDocumentos(self, request_iterator, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def treinarModeloLDAComDocumentos(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def treinarModeloLDA(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def treinarModeloLDA(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
 
 def add_LdaServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'treinarModeloLDAComDocumentos': grpc.stream_unary_rpc_method_handler(
-          servicer.treinarModeloLDAComDocumentos,
-          request_deserializer=message__types__pb2.DocumentoConteudo.FromString,
-          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-      ),
-      'treinarModeloLDA': grpc.unary_unary_rpc_method_handler(
-          servicer.treinarModeloLDA,
-          request_deserializer=message__types__pb2.DocumentoConteudo.FromString,
-          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'br.edu.ifpb.lib.Lda', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
+    rpc_method_handlers = {
+            'treinarModeloLDAComDocumentos': grpc.stream_unary_rpc_method_handler(
+                    servicer.treinarModeloLDAComDocumentos,
+                    request_deserializer=message__types__pb2.DocumentoConteudo.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'treinarModeloLDA': grpc.unary_unary_rpc_method_handler(
+                    servicer.treinarModeloLDA,
+                    request_deserializer=message__types__pb2.DocumentoConteudo.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'br.edu.ifpb.lib.Lda', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class Lda(object):
+    """Missing associated documentation comment in .proto file"""
+
+    @staticmethod
+    def treinarModeloLDAComDocumentos(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_unary(request_iterator, target, '/br.edu.ifpb.lib.Lda/treinarModeloLDAComDocumentos',
+            message__types__pb2.DocumentoConteudo.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def treinarModeloLDA(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/br.edu.ifpb.lib.Lda/treinarModeloLDA',
+            message__types__pb2.DocumentoConteudo.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
 
 
 class RecomendacaoStub(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def __init__(self, channel):
-    """Constructor.
+    def __init__(self, channel):
+        """Constructor.
 
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.buscarRecomendacoes = channel.unary_unary(
-        '/br.edu.ifpb.lib.Recomendacao/buscarRecomendacoes',
-        request_serializer=message__types__pb2.RecomendacaoRequest.SerializeToString,
-        response_deserializer=message__types__pb2.RecomendacaoResponse.FromString,
-        )
-    self.removerDocumentoDoTreinamento = channel.unary_unary(
-        '/br.edu.ifpb.lib.Recomendacao/removerDocumentoDoTreinamento',
-        request_serializer=message__types__pb2.RecomendacaoRequest.SerializeToString,
-        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-        )
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.buscarRecomendacoes = channel.unary_unary(
+                '/br.edu.ifpb.lib.Recomendacao/buscarRecomendacoes',
+                request_serializer=message__types__pb2.RecomendacaoRequest.SerializeToString,
+                response_deserializer=message__types__pb2.RecomendacaoResponse.FromString,
+                )
+        self.removerDocumentoDoTreinamento = channel.unary_unary(
+                '/br.edu.ifpb.lib.Recomendacao/removerDocumentoDoTreinamento',
+                request_serializer=message__types__pb2.RecomendacaoRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
 
 
 class RecomendacaoServicer(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def buscarRecomendacoes(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def buscarRecomendacoes(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def removerDocumentoDoTreinamento(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def removerDocumentoDoTreinamento(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
 
 def add_RecomendacaoServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'buscarRecomendacoes': grpc.unary_unary_rpc_method_handler(
-          servicer.buscarRecomendacoes,
-          request_deserializer=message__types__pb2.RecomendacaoRequest.FromString,
-          response_serializer=message__types__pb2.RecomendacaoResponse.SerializeToString,
-      ),
-      'removerDocumentoDoTreinamento': grpc.unary_unary_rpc_method_handler(
-          servicer.removerDocumentoDoTreinamento,
-          request_deserializer=message__types__pb2.RecomendacaoRequest.FromString,
-          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'br.edu.ifpb.lib.Recomendacao', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
+    rpc_method_handlers = {
+            'buscarRecomendacoes': grpc.unary_unary_rpc_method_handler(
+                    servicer.buscarRecomendacoes,
+                    request_deserializer=message__types__pb2.RecomendacaoRequest.FromString,
+                    response_serializer=message__types__pb2.RecomendacaoResponse.SerializeToString,
+            ),
+            'removerDocumentoDoTreinamento': grpc.unary_unary_rpc_method_handler(
+                    servicer.removerDocumentoDoTreinamento,
+                    request_deserializer=message__types__pb2.RecomendacaoRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'br.edu.ifpb.lib.Recomendacao', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class Recomendacao(object):
+    """Missing associated documentation comment in .proto file"""
+
+    @staticmethod
+    def buscarRecomendacoes(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/br.edu.ifpb.lib.Recomendacao/buscarRecomendacoes',
+            message__types__pb2.RecomendacaoRequest.SerializeToString,
+            message__types__pb2.RecomendacaoResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def removerDocumentoDoTreinamento(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/br.edu.ifpb.lib.Recomendacao/removerDocumentoDoTreinamento',
+            message__types__pb2.RecomendacaoRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
